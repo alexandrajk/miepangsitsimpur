@@ -1,0 +1,294 @@
+<html>
+<!--import fonts to be used-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"> <!--public sans font-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura&display=swap"> <!--futura font-->
+<style>
+    
+    @font-face { /*import the Futura font from file*/
+            font-family: 'Futura';
+            src: url('Futura-1/FuturaPTMedium.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+    }
+    .fixedmenu{ /*fixed menu's size, font, colours*/
+        width:100%;
+        height:20%;
+        display: flex;
+        align-items: center; /*centre the items to the middle of the height*/
+        background-color:#EDE29C;
+        color:#B2332D;
+        position:fixed;
+        left:0;
+        top:0;
+        padding-left:2.5%;
+        font-family: "Public Sans", sans-serif;
+        font-size:34px;
+        overflow: hidden;
+        z-index:1000;
+    }
+    .menulinks{
+        color:#B2332D;
+        text-decoration: none; /*no underlined links*/
+    }
+    .menulinks:hover{ /*add interactive design to menu links: white and enlarged when hovered*/
+        color:white;
+        font-size:110%;
+    }
+    
+    .content{ /*so that the items on the homepage do not go over the fixed menu*/
+        margin-top:20%;
+    }
+    
+    .specialmenu{
+        color:#EDE29C;
+        font-family: "Futura", sans-serif;
+        font-size:40px;
+        animation:SPECIAL 3s infinite;
+        text-align: center;
+    }
+    
+    @keyframes SPECIAL /*for speialty menu text animation*/
+    {
+        0%{letter-spacing: normal;}
+        50%{letter-spacing: 10px;} /*text spacing changes to 10px*/
+        100%{letter-spacing: normal;}
+    }
+    
+    
+    .textanimated{ /*position of animated text*/
+        position: relative;
+        top: 280px;
+    }
+    
+    .recsheading{ /*for the menu recommendation heading*/
+        font-family: "Public Sans", sans-serif;
+        color:#EDE29C;
+        font-size:48px;
+        position: absolute;
+        width:100%;
+        text-align: center;
+        top: 650px;
+    }
+    
+    .menuimg {
+        width:95%;
+        margin: 510px auto; /*position of the table*/
+    }
+    
+    .menuimages{
+        height:260px;
+        width:260px;
+    }
+    
+    .menutd{ /*centering items in table + font*/
+        text-align: center;
+        font-family: "Futura", sans-serif;
+        color:#EDE29C;
+        font-size:25px;
+        width:25%;
+    }
+    
+    .faqheading{ /*for the faq heading*/
+        font-family: "Public Sans", sans-serif;
+        color:#EDE29C;
+        font-size:48px;
+        position: absolute;
+        width:100%;
+        text-align: center;
+        top: 1180px;
+    }
+    /*start of css for faq accordion dropdown*/
+    .accordion {
+        background-color: #B2332D;
+        color: #EDE29C;
+        cursor: pointer;
+        font-family: "Futura", sans-serif;
+        padding: 18px;
+        padding-left: 50px;
+        width: 95%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 30px;
+        transition: 0.4s;
+        position:relative;
+        top:-320px;
+    }
+
+    .active, .accordion:hover {
+        background-color: #BF403A;
+    }
+
+    .accordion:after {
+        content: '\1F893';
+        color: #EDE29C;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\1F891";
+        color: #EDE29C;
+    }
+
+    .panel {
+        padding: 10px;
+        padding-left:50px;
+        background-color: #B2332D;
+        font-family: "Futura", sans-serif;
+        font-size: 25px;
+        color: #EDE29C;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        position:relative;
+        top:-320px;
+    }
+    /*end of css for faq accordion dropdown*/
+    
+    .locationimg{
+        width:567px;
+        height:326px;
+        }
+        
+    .locationtable{
+        font-family: "Futura", sans-serif;
+        color:#EDE29C;
+        width:98%;
+        text-align:center;
+        position:absolute;
+        top:1680px;
+    }
+    
+    .locationtd{font-size:42px;}
+    .addresstd{font-size:28px;}
+    
+    footer{
+        background-color:#EDE29C;
+        width:100%;
+        height:450px;
+        position:absolute;
+        top:2150px;
+        font-family: "Public Sans", sans-serif;
+        font-size:34px;
+        color:#B2332D;
+        }
+        
+    .footerimg{
+        width:auto;
+        height:75px;
+        position:absolute;
+        left:400px;
+        top:40px;
+    }
+    
+</style>
+
+<body style="background-color:#B2332D;">
+
+<!--- fixed menu-->
+<div class="fixedmenu">
+    <img src="https://i.ibb.co/5LvhFyq/image-removebg-preview-1.png" style="width: 156px; height: auto;">
+    <p style="width:31%;"> Mie Pangsit Simpur</p>
+    <a href="index.html" class="menulinks" style="width:12%;"> HOME </a>
+    <a href="contact.html" class="menulinks"> CONTACT US </a>
+</div>
+
+<div class="content"> <!--all the content in the homepage outside of the fixed menu-->
+
+    <img src="https://i.ibb.co/t4gRKbZ/MPS-Special-Menu.png" style="width: auto; height: 310px; position: absolute; left: 85px; top: 192px;">
+    <div class="textanimated">
+        <p class="specialmenu"> Try our specialty menu: Mie Simpur Spesial!  </p>
+    </div>
+    <p class="recsheading"> Menu Recommendation </p>
+    
+    <table border=0 class="menuimg"> <!--for the images & names of menu recs-->
+        <tr>
+            <td class="menutd"> <img src="https://i.ibb.co/tqs8N0T/menu1.png" class="menuimages"> </td>
+            <td class="menutd"> <img src="https://i.ibb.co/6mHhqjN/menu2.png" class="menuimages"></td>
+            <td class="menutd"> <img src="https://i.ibb.co/JxZbBHL/menu3.png" class="menuimages"></td>
+            <td class="menutd"> <img src="https://i.ibb.co/GCs0T4K/menu4.png" class="menuimages"></td>
+        </tr>
+        <tr>
+            <td class="menutd"> Pangsit Legit'No </td>
+            <td class="menutd"> Pangsit Kuah </td>
+            <td class="menutd"> Ikan Gurame Masak Acar Kuning </td>
+            <td class="menutd"> Bakmi Nyemek </td>
+        </tr>
+    </table>
+    
+    <p class="faqheading"> Frequently Asked Questions </p>
+    
+    <!--start of the faq accordion dropdown-->
+    
+    <button class="accordion"> Is Mie Pangsit Simpur halal? </button>
+    <div class="panel">
+        <p> Yes, Mie Pangsit Simpur is certified halal. </p>
+    </div>
+
+    <button class="accordion"> Does Mie Pangsit Simpur have good ratings? </button>
+    <div class="panel">
+        <p> We are rated 4.8 stars out of 5 on GoFood. </p>
+    </div>
+
+    <script> //accordion dropdown javascript
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    
+    <!--end of the faq accordion dropdown-->
+    
+    <table class="locationtable"> <!--table for the location section-->
+        <tr>
+            <td rowspan="3"> <a  href="https://maps.app.goo.gl/AWqnPiwHnhSX3aQD8"> <!--makes the image link to gmaps-->
+            <img src="https://i.ibb.co/df6bp0J/mpslocation.png" alt="mpslocation" border="0" class="locationimg">
+            </a> </td>
+            <td class="locationtd"> Our Location </td>
+        </tr>
+        <tr>
+            <td class="addresstd" style="text-align:left;"> Jl. Kemang Pratama Raya Blok AM-7D <br> Bojong Rawalumbu, Rawalumbu <br> Bekasi</td>
+        </tr>
+        <tr>
+            <td class="addresstd" style="text-align:left;"> Open 7:00 - 21:00 everyday </td>
+        </tr>
+    </table>
+    
+    <footer> <!--footer-->
+        <img src="https://i.ibb.co/5LvhFyq/simpur-logo-for-cs-website.png" alt="simpur-logo-for-cs-website" border="0" class="footerimg">
+        <p style="position:absolute; left:550px; top:20px;"> Mie Pangsit Simpur</p>
+        <a href="index.html" style="position:absolute; left:200px; top:160px;
+        color:#B2332D;text-decoration: none;">HOME</a> <!--link to homepage-->
+        <a href="contact.html" style="position:absolute; left:200px; top:240px;
+        color:#B2332D;text-decoration: none;">CONTACT US</a> <!--link to contact us page-->
+        
+        <!--gofood link-->
+        <a href="https://gofood.co.id/id/jakarta/restaurant/mie-pangsit-bakmi-simpur-kemang-pratama-4db47be8-87cd-4eaa-996c-935146ca8e2c">
+            <img src="https://i.ibb.co/k9p146W/gofoodlink.png" alt="gofoodlink" border="0"
+                 style="position:absolute; left:800px;top:145px; width:auto;height:70px;">
+        </a>
+        
+        <a href="https://www.instagram.com/simpur_restobekasi/?hl=en">
+            <img src="https://i.ibb.co/5cYDHbx/instagramlink.png" alt="instagramlink" border="0"
+                 style="position:absolute; left:800px;top:225px; width:auto;height:70px;">
+        </a>
+        
+    </footer>    
+
+</div>
+
+</body>
+
+</html>

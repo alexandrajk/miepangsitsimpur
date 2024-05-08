@@ -1,0 +1,154 @@
+<html>
+<!--import fonts to be used-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"> <!--public sans font-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura&display=swap"> <!--futura font-->
+<style>
+    
+    @font-face { /*import the Futura font from file*/
+            font-family: 'Futura';
+            src: url('Futura-1/FuturaPTMedium.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+    }
+    .fixedmenu{ /*fixed menu's size, font, colours*/
+        width:100%;
+        height:20%;
+        display: flex;
+        align-items: center; /*centre the items to the middle of the height*/
+        background-color:#EDE29C;
+        color:#B2332D;
+        position:fixed;
+        left:0;
+        top:0;
+        padding-left:2.5%;
+        font-family: "Public Sans", sans-serif;
+        font-size:34px;
+        overflow: hidden;
+        z-index:1000;
+    }
+    .menulinks{
+        color:#B2332D;
+        text-decoration: none; /*no underlined links*/
+    }
+    .menulinks:hover{ /*add interactive design to menu links: white and enlarged when hovered*/
+        color:white;
+        font-size:110%;
+    }
+    
+    .content{ /*so that the items on the homepage do not go over the fixed menu*/
+        margin-top:20%;
+    }
+    
+    .msgheading{
+        font-family:"Public Sans", sans-serif;
+        color:#EDE29C;
+        font-size:30px;
+        position:absolute;
+        left:150px;
+        top:170px;
+    }
+    
+    .inputtext{
+        font-family: "Futura", sans-serif;
+        font-size:20px;
+    }
+    
+    .button{
+        height:54px;
+        width:980px;
+        position:absolute;
+        top:520px;
+        left:150px;
+        font-family:"Public Sans", sans-serif;
+        font-size:24px;
+        background-color:#EDE29C;
+        color:#B2332D;
+    }
+    
+    .button:hover{cursor: pointer;}
+    
+    footer{
+        background-color:#EDE29C;
+        width:100%;
+        height:450px;
+        position:absolute;
+        top:630px;
+        font-family: "Public Sans", sans-serif;
+        font-size:34px;
+        color:#B2332D;
+        }
+        
+    .footerimg{
+        width:auto;
+        height:75px;
+        position:absolute;
+        left:400px;
+        top:40px;
+    }
+    
+</style>
+
+<body style="background-color:#B2332D;">
+
+<!--- fixed menu-->
+<div class="fixedmenu">
+    <img src="https://i.ibb.co/5LvhFyq/image-removebg-preview-1.png" style="width: 156px; height: auto;">
+    <p style="width:31%;"> Mie Pangsit Simpur</p>
+    <a href="index.html" class="menulinks" style="width:12%;"> HOME </a>
+    <a href="contact.html" class="menulinks"> CONTACT US </a>
+</div>
+
+<div class="content"> <!--all the content in the homepage outside of the fixed menu-->
+    <p class="msgheading"> Send us a message! </p>
+    
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="dca1ef44-23bf-453e-86b8-f7ef9bf74ad1">
+        <table>
+            <tr>
+                <td style="width:50%;"> <input type="text" placeholder= "Your Name" class="inputtext" 
+                                        style="height:54px; width:480px; position:absolute; top:265px;left:150px;" id="Name" name="Name"> </td>
+                <td style="width:50%;"> <input type="text" placeholder= "Email Address *" class="inputtext" 
+                                        style="height:54px; width:480px; position:absolute; top:265px;left:650px;" id="Email" name="Email" required> </td>
+            </tr>
+            <tr>
+                <td colspan=2> <input type="text" placeholder= "Subject * "class="inputtext" 
+                                        style="height:54px; width:980px; position:absolute; top:330px;left:150px;" id="Subject" name="Subject" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=2> <input type="text" placeholder= "Message * "class="inputtext" 
+                                        style="height:100px; width:980px; position:absolute; top:400px;left:150px;" id="Message" name="Message" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan=2> <input type="submit" value="SEND MESSAGE" class="button"></td>
+            </tr>
+            
+        </table>
+    </form>
+    
+    <footer> <!--footer-->
+        <img src="https://i.ibb.co/5LvhFyq/simpur-logo-for-cs-website.png" alt="simpur-logo-for-cs-website" border="0" class="footerimg">
+        <p style="position:absolute; left:550px; top:20px;"> Mie Pangsit Simpur</p>
+        <a href="index.html" style="position:absolute; left:200px; top:160px;
+        color:#B2332D;text-decoration: none;">HOME</a> <!--link to homepage-->
+        <a href="contact.html" style="position:absolute; left:200px; top:240px;
+        color:#B2332D;text-decoration: none;">CONTACT US</a> <!--link to contact us page-->
+        
+        <!--gofood link-->
+        <a href="https://gofood.co.id/id/jakarta/restaurant/mie-pangsit-bakmi-simpur-kemang-pratama-4db47be8-87cd-4eaa-996c-935146ca8e2c">
+            <img src="https://i.ibb.co/k9p146W/gofoodlink.png" alt="gofoodlink" border="0"
+                 style="position:absolute; left:800px;top:145px; width:auto;height:70px;">
+        </a>
+        
+        <a href="https://www.instagram.com/simpur_restobekasi/?hl=en">
+            <img src="https://i.ibb.co/5cYDHbx/instagramlink.png" alt="instagramlink" border="0"
+                 style="position:absolute; left:800px;top:225px; width:auto;height:70px;">
+        </a>
+        
+    </footer>
+    
+</div>
+</body>
+</html>
